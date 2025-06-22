@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Register a Course</h2>
+    <form action="http://localhost:8080/courses/register" method="post">
+        <label for="name">Enter your name</label>
+        <input type="text" name="name"><br>
+
+        <label for="emailId">Enter your emailId</label>
+        <input type="email" name="emailId"><br>
+
+        <label for="course">Choose a Course</label>
+        <select id="course" name="courseName">
+          
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+            <option value="cloudcomputing">Cloud Computing</option>
+            <option value="machinelearning">Machine Learning</option>
+            <option value="machinelearningwithIot">Machine Learning with Iot</option>
+          
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
